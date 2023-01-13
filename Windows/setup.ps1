@@ -8,12 +8,6 @@ function WSL {
     wsl -d fedoraremix -u root curl -fsSL https://raw.githubusercontent.com/amarnathjamale/homeinfra/master/Linux/setup.bash | bash
 }
 
-function Hardening {
-    Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process -Force
-    Invoke-RestMethod script.sophi.app | Invoke-Expression
-    Set-Location $DownloadsFolder\Sophia*
-    .\Sophia.ps1
-}
 
 function Apps {
     winget install Git.Git
@@ -68,10 +62,9 @@ do {
     switch ($selection) {
         '1' { VSCode }
         '2' { WSL }
-        '3' { Hardening }
-        '4' { Apps }
-        '5' { Spotify }
-        '6' { ALL }
+        '3' { Apps }
+        '4' { Spotify }
+        '5' { ALL }
     }
     pause
 }
