@@ -13,4 +13,3 @@ pip install ansible
 ansible-galaxy collection install ansible.eda
 ansible-playbook -i localhost, -c local ansible.eda.install_rulebook_cli
 
-# Run Ansible Playbook for Home Infra
